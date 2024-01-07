@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="quiz-container">
+    <h2>Quiz App</h2>
+    <p>Click Reload to start the Quiz</p>
+    <form id="quiz-form">
+      <div class="question" id="question1">
+        <label>
+          1. Which language run on the web browser?
+          <input type="radio" name="q1" value="Paris"> Javascript
+          <input type="radio" name="q1" value="Berlin"> Python
+          <input type="radio" name="q1" value="London"> Java
+          <input type="radio" name="q1" value="London"> C
+        </label>
+        <button type="button" onclick="nextQuestion('question2')">Next</button>
+      </div>
+
+      <div class="question" id="question2">
+        <label>
+          2. Which of the following is not a valid C variable name??
+          <input type="radio" name="q2" value="Mars"> int Number
+          <input type="radio" name="q2" value="Venus"> float rate
+          <input type="radio" name="q2" value="Jupiter"> int $main
+          <input type="radio" name="q2" value="Jupiter"> int variable_count
+        </label>
+        <button type="button" onclick="nextQuestion('question3')">Next</button>
+      </div>
+
+      <div class="question" id="question3">
+        <label>
+          3. How is the 3rd element in an array accessed based on pointer notation?
+          <input type="radio" name="q3" value="Elephant"> *a+3
+          <input type="radio" name="q3" value="Blue Whale"> *(a+3)
+          <input type="radio" name="q3" value="Giraffe"> *(*a+3)
+          <input type="radio" name="q3" value="Giraffe"> &(a+3)
+        </label>
+        <button type="button" onclick="nextQuestion('question4')">Next</button>
+      </div>
+
+      <div class="question" id="question4">
+        <label>
+          4. Who wrote "Romeo and Juliet"?
+          <input type="radio" name="q4" value="Charles Dickens"> Charles Dickens
+          <input type="radio" name="q4" value="William Shakespeare"> William Shakespeare
+          <input type="radio" name="q4" value="Jane Austen"> Jane Austen
+        </label>
+        <button type="button" onclick="nextQuestion('question5')">Next</button>
+      </div>
+
+      <div class="question" id="question5">
+        <label>
+          5. Which programming language is known for its use in web development?
+          <input type="radio" name="q5" value="Java"> Java
+          <input type="radio" name="q5" value="Python"> Python
+          <input type="radio" name="q5" value="JavaScript"> JavaScript
+        </label>
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </div>
+    </form>
+
+    <div id="result"></div>
+    <button id="reload-btn" onclick="reloadQuiz()">Reload Quiz</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
